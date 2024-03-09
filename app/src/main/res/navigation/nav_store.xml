@@ -13,8 +13,10 @@
         <action
             android:id="@+id/action_productsFragment_to_productInfoFragment"
             app:destination="@id/nav_productInfo_fragment"
-            app:launchSingleTop="true"
+            app:launchSingleTop="false"
             app:popUpToInclusive="true"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@null"
             />
     </fragment>
     <fragment

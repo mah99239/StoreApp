@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.transition.Fade
 import androidx.transition.Transition
@@ -40,7 +40,7 @@ class ProductsFragment : Fragment() {
     private val productsAdapter: ProductsAdapter by lazy {
         ProductsAdapter {
             viewModel.setItemProductSelected(it)
-            requireView().findNavController()
+            findNavController()
                 .navigate(R.id.action_productsFragment_to_productInfoFragment)
         }
     }
@@ -103,7 +103,6 @@ class ProductsFragment : Fragment() {
      * Sets up the observer for the products with animator.
      */
     private fun setupObserverProductsWithAnimator() {
-        Timber.e("setupObserverProductsWithAnimator")
         viewModel.products.observe(viewLifecycleOwner) {
             stopAnimator()
             binding.products = it
