@@ -19,3 +19,7 @@ The project is organized into four packages:
 * ViewModel and LiveData: Manages UI-related data in a lifecycle-aware manner.
 * ViewBinding: Reduces boilerplate code related to UI interactions.
 * SwipeRefreshLayout: A library used for swipe layout to update data.
+
+### Screenshot
+[![](screen_shoot/screen_products_task.gif)]
+
