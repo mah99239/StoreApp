@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_store"
+    app:startDestination="@id/nav_products_fragment">
+
+    <fragment
+        android:id="@+id/nav_products_fragment"
+        android:name="com.mz.storeapp.presentation.product.ProductsFragment"
+        android:label="@string/products_title"
+        tools:layout="@layout/fragment_products">
+        <action
+            android:id="@+id/action_productsFragment_to_productInfoFragment"
+            app:destination="@id/nav_productInfo_fragment"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_productInfo_fragment"
+        android:name="com.mz.storeapp.presentation.product.ProductInfoFragment"
+        android:label="@string/info_product_title"
+        tools:layout="@layout/fragment_product_info" />
+</navigation>

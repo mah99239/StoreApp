@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.app.DisplayLarge" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+    </style>
+
+    <style name="TextAppearance.app.DisplayMedium" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+    </style>
+
+    <style name="TextAppearance.app.DisplaySmall" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+    </style>
+
+    <style name="TextAppearance.app.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+
+    </style>
+
+    <style name="TextAppearance.app.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+    </style>
+
+    <style name="TextAppearance.app.HeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+    </style>
+
+    <style name="TextAppearance.app.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+    </style>
+
+    <style name="TextAppearance.app.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/work_sans_medium</item>
+        <item name="android:fontFamily">@font/work_sans_medium</item>
+    </style>
+
+    <style name="TextAppearance.app.TitleSmall" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/work_sans_medium</item>
+        <item name="android:fontFamily">@font/work_sans_medium</item>
+    </style>
+
+    <style name="TextAppearance.app.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+    </style>
+
+    <style name="TextAppearance.app.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+    </style>
+
+    <style name="TextAppearance.app.BodySmall" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+    </style>
+
+    <style name="TextAppearance.app.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
+        <item name="fontFamily">@font/work_sans_medium</item>
+        <item name="android:fontFamily">@font/work_sans_medium</item>
+    </style>
+
+    <style name="TextAppearance.app.LabelMedium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/work_sans_medium</item>
+        <item name="android:fontFamily">@font/work_sans_medium</item>
+    </style>
+
+    <style name="TextAppearance.app.LabelSmall" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/work_sans_medium</item>
+        <item name="android:fontFamily">@font/work_sans_medium</item>
+    </style>
+
+    <style name="circleImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">30%</item>
+    </style>
+
+</resources>

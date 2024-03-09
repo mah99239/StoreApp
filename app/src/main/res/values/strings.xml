@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">StoreApp</string>
+
+    // Status network
+    <string name="network_error">Check your internet connection Please</string>
+    <string name="network_available">back online</string>
+    <string name="all_error_unknown">Something went wrong!</string>
+    <string name="error_fetch_remote_data">Network error fetching remote data, using cached data.</string>
+    <string name="error_fetch_remote_data_unknown">An error occurred, using cached data.</string>
+
+
+    // Products
+    <string name="currency">LE</string>
+    // Products
+    Empty
+    <string name="empty_products_title">No Products to display</string>
+    <string name="empty_products_message">There are currently no Products available.</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="products_title">Products</string>
+    <string name="info_product_title">Info Product</string>
+</resources>

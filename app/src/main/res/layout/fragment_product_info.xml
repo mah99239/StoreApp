@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="product"
+            type="com.mz.storeapp.data.model.remote.ProductItem" />
+
+        <variable
+            name="isLoading"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.product.ProductInfoFragment">
+
+        <ImageView
+            android:id="@+id/imv_product_info"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/small_spacing"
+            android:scaleType="fitCenter"
+            app:error="@{@drawable/ic_outline_hide_image_24}"
+            app:imageUrl="@{product.image}"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_product_info"
+            app:layout_constraintDimensionRatio="w,15:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeholder="@{@drawable/ic_outline_image_24}"
+            tools:src="@drawable/ic_outline_image_24" />
+
+        <TextView
+            android:id="@+id/tv_product_info_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_spacing"
+            android:layout_marginTop="@dimen/normal_spacing"
+            android:layout_marginEnd="@dimen/small_spacing"
+            android:text="@{product.title}"
+            android:textAppearance="@style/TextAppearance.app.TitleMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imv_product_info"
+            tools:text="Title Product" />
+
+        <TextView
+            android:id="@+id/tv_product_info_description_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_spacing"
+            android:text="Description"
+            android:textAppearance="@style/TextAppearance.app.BodyLarge"
+
+            app:layout_constraintStart_toStartOf="@+id/tv_product_info_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product_info_price" />
+
+        <TextView
+            android:id="@+id/tv_product_info_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/smaller_spacing"
+            android:layout_marginEnd="@dimen/small_spacing"
+            android:text="@{product.description}"
+            android:textAppearance="@style/TextAppearance.app.LabelMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_product_info_description_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_product_info_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product_info_description_title"
+            tools:text="Description Product" />
+
+        <TextView
+            android:id="@+id/tv_product_info_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_spacing"
+            android:text="@{String.valueOf(product.price) + ' ' + @string/currency}"
+            android:textAppearance="@style/TextAppearance.app.TitleMedium"
+            android:textColor="@color/md_theme_light_inversePrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_product_info_description"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product_info_title"
+            tools:text="@string/currency" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/ratingBar_product_info"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/larger_spacing"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/md_theme_light_inversePrimary"
+            android:progressTint="@color/md_theme_light_primary"
+            android:rating="@{(float)product.rating.rate}"
+            android:stepSize="0.1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product_info_description"
+            tools:rating="3.4" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/cpi_products"
+            style="@style/Widget.Material3.CircularProgressIndicator.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="@{isLoading ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_product_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_product_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{!isLoading ? View.VISIBLE : View.INVISIBLE}"
+
+            app:constraint_referenced_ids="imv_product_info,tv_product_info_title, tv_product_info_description,tv_product_info_description_title,tv_product_info_price,tv_product_info_price,ratingBar_product_info" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
